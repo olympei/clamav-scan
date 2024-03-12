@@ -1,13 +1,13 @@
 variable "aws_region" {
   description = "A region the infrastructure will be deployed in."
   type        = string
-  default     = "us-east-1"
+  default     = "ap-south-1"
 }
 
 variable "buckets_to_scan" {
   description = "The buckets which need scanning."
   type        = list(string)
-  default     = ["scaninputbuckettt"]
+  default     = ["scaninputbucket", "scaninputbucket3"]
 }
 
 # -----------------------------
@@ -108,4 +108,49 @@ variable "bucket_events" {
   description = "Specifies event for which to send notifications."
   default     = ["s3:ObjectCreated:*"]
   type        = list(string)
+}
+
+
+variable "All_notification" {
+  default = "All_notification"
+  description = "first sns topic created from terraform"
+}
+
+variable "infected_SNS" {
+  default = "infected_SNS"
+  description = "first sns topic created from terraform"
+}
+
+
+variable "account_id"{
+    description = "my aws ac id"
+    default = "670995247083"
+}
+
+variable "email_name"{
+  type    = string
+  default = "akb0103.official@gmail.com"
+}
+
+variable "create_resources"{
+  type    = string
+  default = "yes"
+}
+
+variable "infected_notification"{
+  type    = string
+  default = "true"
+}
+variable "All_Notification"{
+  type    = string
+  default = "true"
+}
+
+variable "All_Notification_sns_name"{
+  type    = string
+  default = "All_Notification"
+}
+variable "infected_notification_sns_name"{
+  type    = string
+  default = "infected_notification"
 }
