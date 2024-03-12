@@ -1,0 +1,9 @@
+1. read SNS and varible from os , not pass static in code: Done dated 21/jan
+2. notifications case : Two seprate  
+    a. all file notification 
+    b. only for infected file 
+
+3. make testing for multiple buckets 
+4. copy infected files to new buckets 
+5. delete if not qarontine buckets
+
